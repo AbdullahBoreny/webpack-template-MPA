@@ -1,24 +1,33 @@
-// webpack.config.js
 import path from "node:path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+let htmlPageNames = ["about"];
+let multipleHtmlPlugins = htmlPageNames.map((name) => {
+  return new HtmlWebpackPlugin({
+    template: `./src/${name}.html`,
+    filename: `${name}.html`,
+    chunks: [`${name}`], // respective JS files
+  });
+});
 
 export default {
   mode: "development",
-  entry: "./src/index.js",
+  entry: { main: "./src/index.js", about: "./src/about.js" },
   output: {
-    filename: "main.js",
+    filename: "[name].js",
     path: path.resolve(import.meta.dirname, "dist"),
     clean: true,
   },
   devtool: "eval-source-map",
   devServer: {
-    watchFiles: ["./src/index.html"],
+    watchFiles: ["./src/index.html", "./src/about.html"],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
+      chunks: ["main"],
     }),
-  ],
+  ].concat(multipleHtmlPlugins),
+
   module: {
     rules: [
       {
