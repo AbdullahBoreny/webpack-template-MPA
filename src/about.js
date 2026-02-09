@@ -3,7 +3,9 @@ const aboutPage = function () {
   const paragraph = document.createElement("p");
   const h2 = document.createElement("h2");
   const paragraph2 = document.createElement("p");
-
+  const aboutDiv = document.createElement("div");
+  aboutDiv.classList.add("about-section");
+  aboutDiv.append(h1, paragraph, h2, paragraph2);
   const container = document.querySelector("#content");
   h1.textContent = "About us";
   paragraph.textContent =
@@ -12,6 +14,6 @@ const aboutPage = function () {
   paragraph2.textContent =
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eius iure repellendus, earum necessitatibus odio, pariatur autem optio animi blanditiis quisquam accusantium temporibus ipsum tenetur inventore sunt esse. Nemo, accusamus";
 
-  container.append(h1, paragraph, h2, paragraph2);
+  container.append(aboutDiv);
 };
-module.exports = aboutPage;
+export default aboutPage;

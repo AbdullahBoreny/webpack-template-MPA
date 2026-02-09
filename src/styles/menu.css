@@ -1,0 +1,65 @@
+/* Menu Page Container */
+.menu-section {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px;
+  margin-top: 200px;
+  background-color: #4b2e1e;
+  color: #f5f5f5;
+  border-radius: 12px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Main Title */
+.menu-section h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+/* Intro Text */
+.menu-section p {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Section Titles */
+.menu-section h2 {
+  font-size: 1.6rem;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #444;
+  padding-bottom: 5px;
+}
+
+/* Menu Lists */
+.menu-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Menu Items */
+.menu-section li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  font-size: 1.05rem;
+  border-bottom: 1px dashed #333;
+}
+
+/* Price Highlight */
+.menu-section li span {
+  color: #f4c430;
+  font-weight: bold;
+}
+
+/* Hover Effect */
+.menu-section li:hover {
+  color: #f4c430;
+  transform: translateX(5px);
+  transition: all 0.2s ease;
+}
