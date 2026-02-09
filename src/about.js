@@ -9,7 +9,7 @@ const aboutPage = function () {
   const container = document.querySelector("#content");
   h1.textContent = "About us";
   paragraph.textContent =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eius iure repellendus, earum necessitatibus odio, pariatur autem optio animi blanditiis quisquam accusantium temporibus ipsum tenetur inventore sunt esse. Nemo, accusamus";
+    "Lorem ipsum dolor sit ametd consectetur adipisicing elit. Obcaecati eius iure repellendus, earum necessitatibus odio, pariatur autem optio animi blanditiis quisquam accusantium temporibus ipsum tenetur inventore sunt esse. Nemo, accusamus";
   h2.textContent = "Around The Managers";
   paragraph2.textContent =
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eius iure repellendus, earum necessitatibus odio, pariatur autem optio animi blanditiis quisquam accusantium temporibus ipsum tenetur inventore sunt esse. Nemo, accusamus";
