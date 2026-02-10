@@ -1,4 +1,3 @@
-import heroImage from "./templates/res.jpg";
 
 const aboutPage = function () {
   const h1 = document.createElement("h1");

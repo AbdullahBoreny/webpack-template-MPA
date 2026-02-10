@@ -5,6 +5,7 @@ import "./styles/menu.css";
 import "./styles/about.css";
 import menuPage from "./menu";
 import aboutPage from "./about";
+const menuContainer = document.querySelector(".menu-container");
 const homeBtn = document.querySelector(".home");
 const aboutBtn = document.querySelector(".about");
 const menuBtn = document.querySelector(".menu");
@@ -38,6 +39,8 @@ const homePage = function () {
 
   content.append(imageDiv, homeDiv);
   btn.addEventListener("click", () => {
+    menuContainer.textContent = "";
+
     content.textContent = "";
     menuPage();
   });
@@ -45,14 +48,17 @@ const homePage = function () {
 
 homeBtn.addEventListener("click", () => {
   content.textContent = "";
+  menuContainer.textContent = "";
+
   homePage();
 });
 aboutBtn.addEventListener("click", () => {
   content.textContent = "";
+  menuContainer.textContent = "";
+
   aboutPage();
 });
 menuBtn.addEventListener("click", () => {
-  content.textContent = "";
   menuPage();
 });
 homePage();

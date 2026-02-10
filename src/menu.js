@@ -1,7 +1,10 @@
 import heroImage from "./templates/res.jpg";
 
 const menuPage = function () {
-  const container = document.querySelector("#content");
+  const content = document.querySelector("#content")
+  const menuContainer = document.querySelector(".menu-container");
+  menuContainer.textContent = "";
+  content.textContent = "";
   const img = document.createElement("img");
   img.src = heroImage;
   const menuDiv = document.createElement("div");
@@ -77,8 +80,7 @@ const menuPage = function () {
     drinksTitle,
     drinksList,
   );
-
-  container.append(menuDiv);
+  menuContainer.append(menuDiv);
 };
 
 export default menuPage;
