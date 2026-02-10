@@ -5,29 +5,28 @@ import "./styles/menu.css";
 import "./styles/about.css";
 import menuPage from "./menu";
 import aboutPage from "./about";
-
 const homeBtn = document.querySelector(".home");
 const aboutBtn = document.querySelector(".about");
 const menuBtn = document.querySelector(".menu");
 const content = document.querySelector("#content");
-
+const createComponent = function (element, text, className) {
+  const el = document.createElement(element);
+  el.classList.add(className);
+  el.textContent = text;
+  return el;
+};
 const homePage = function () {
   const h1 = document.createElement("h1");
   h1.textContent = "Our Wonderful Restaurant";
 
-  const img = document.createElement("img");
-  img.src = heroImage;
-
   const paragraph = document.createElement("p");
   paragraph.textContent =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eius iure repellendus, earum necessitatibus odio, pariatur autem optio animi blanditiis quisquam accusantium temporibus ipsum tenetur inventore sunt esse. Nemo, accusamus";
+    " where fresh flavors, warm service, and a cozy atmosphere make every meal a delight.";
+  const img = document.createElement("img");
+  img.src = heroImage;
+  const btn = createComponent("button", "Our Menu", "button-menu");
 
-  const h2 = document.createElement("h2");
-  h2.textContent = "";
-  const paragraph2 = document.createElement("p");
-
-  paragraph2.textContent = "";
- const homeDiv = document.createElement("div");
+  const homeDiv = document.createElement("div");
   homeDiv.classList.add("hero-text");
 
   const imageDiv = document.createElement("div");
@@ -35,9 +34,13 @@ const homePage = function () {
 
   imageDiv.append(img);
 
-  homeDiv.append(h1, paragraph, h2, paragraph2);
+  homeDiv.append(h1, paragraph, btn);
 
   content.append(imageDiv, homeDiv);
+  btn.addEventListener("click", () => {
+    content.textContent = "";
+    menuPage();
+  });
 };
 
 homeBtn.addEventListener("click", () => {

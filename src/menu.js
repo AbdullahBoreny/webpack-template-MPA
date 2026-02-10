@@ -1,6 +1,9 @@
+import heroImage from "./templates/res.jpg";
+
 const menuPage = function () {
   const container = document.querySelector("#content");
-
+  const img = document.createElement("img");
+  img.src = heroImage;
   const menuDiv = document.createElement("div");
   menuDiv.classList.add("menu-section");
 
@@ -72,7 +75,7 @@ const menuPage = function () {
     mainTitle,
     mainList,
     drinksTitle,
-    drinksList
+    drinksList,
   );
 
   container.append(menuDiv);
