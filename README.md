@@ -1,4 +1,4 @@
-[![Live Preview](https://img.shields.io/badge/Live-Preview-brightgreen)](https://abdullahboreny.github.io/restaurant/)
+[![Live Preview](https://img.shields.io/badge/Live-Preview-brightgreen)](https://abdullahboreny.github.io/Restaurant-Page/)
 
 Restaurant page project built with JavaScript and Webpack, featuring SPA-like navigation and dynamic DOM rendering.
 
